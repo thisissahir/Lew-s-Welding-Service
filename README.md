@@ -9,11 +9,18 @@ Static HTML/CSS with no build step.
 ## Structure
 
 ```
-index.html      # the entire site (inline CSS + minimal JS)
-brand/          # logo set (SVG + PNG variants)
-vercel.json     # clean URLs, security headers, asset caching
-*.mp4, *.jpg    # video and image assets
+index.html        # the entire site (inline CSS + minimal JS)
+404.html          # custom not-found page (Vercel serves it automatically)
+brand/            # logo set (SVG + PNG variants)
+landing-page.mp4  # hero background video (autoplays muted, looped)
+robots.txt        # allows all crawlers, points to the sitemap
+sitemap.xml       # single-URL sitemap
+vercel.json       # clean URLs, security headers, asset caching
 ```
+
+The hero uses `landing-page.mp4` as a muted, looping background video with a
+brand-tinted scrim for text legibility. It's hidden for visitors who prefer
+reduced motion, falling back to the gradient background.
 
 ## Deploy to Vercel
 

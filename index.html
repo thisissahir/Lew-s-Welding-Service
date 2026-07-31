@@ -13,8 +13,14 @@
 <meta property="og:site_name" content="Lew's Welding Service">
 <meta property="og:title" content="Lew's Welding Service — Tyler, Texas. Since 1928.">
 <meta property="og:description" content="Welding, fabrication, machine work and metal sales on East Erwin Street since 1928. Big jobs, small jobs, and the ones nobody else wants to touch.">
+<meta property="og:url" content="https://lewswelding.com/">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://lewswelding.com/brand/lews-logo-primary.png">
+<meta property="og:image:alt" content="Lew's Welding Service logo">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lew's Welding Service — Tyler, Texas. Since 1928.">
+<meta name="twitter:description" content="Welding, fabrication, machine work and metal sales on East Erwin Street since 1928. Big jobs, small jobs, and the ones nobody else wants to touch.">
+<meta name="twitter:image" content="https://lewswelding.com/brand/lews-logo-primary.png">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2310254D'/%3E%3Cellipse cx='32' cy='32' rx='27' ry='18' fill='none' stroke='%23FFC72C' stroke-width='4'/%3E%3Ctext x='32' y='40' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='24' fill='%23FFC72C' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 
@@ -280,6 +286,11 @@ header.site.scrolled .logo .badge{width:104px}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.035;
   background:repeating-linear-gradient(-45deg,var(--white) 0 2px,transparent 2px 22px)}
 .hero .wrap{position:relative;z-index:2;width:100%}
+/* full-bleed landing video + brand-tinted legibility scrim */
+.hero-video{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(163deg,rgba(23,51,95,.72) 0%,rgba(16,37,77,.78) 55%,rgba(6,8,12,.86) 100%)}
+@media (prefers-reduced-motion:reduce){.hero-video{display:none}}
 
 .est{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1.4rem;
   border:2px solid rgba(248,248,246,.3);border-radius:999px;padding:.42rem 1.05rem;
@@ -585,6 +596,10 @@ body{padding-bottom:calc(63px + env(safe-area-inset-bottom))}
 
 <!-- ══════════ HERO ══════════ -->
 <section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="landing-page.mp4" type="video/mp4">
+  </video>
+  <div class="hero-scrim" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-cols">
       <div>
